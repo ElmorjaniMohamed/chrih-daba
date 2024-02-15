@@ -82,7 +82,6 @@ Les contributions à Chrih-Daba sont les bienvenues! Si vous souhaitez contribue
 
 Pour toute question ou préoccupation, n'hésitez pas à nous contacter à l'adresse suivante: [elmorjanimohamed9@gmail.com](mailto:elmorjanimohamed9@gmail.com) or [elmahfoudinada17@gmail.com](mailto:elmahfoudinada17@gmail.com)
 
-Suivez-nous sur Twitter [@chrih-daba](https://twitter.com/chrih-daba) pour les mises à jour et les annonces.
 
 ---
 

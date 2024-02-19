@@ -25,17 +25,17 @@
             </div>
         </div>
     </section>
-    <section aria-labelledby="perks-heading" class="border-t border-gray-200 bg-gray-50">
-        <h2 id="perks-heading" class="sr-only">Our perks</h2>
 
-        <div class="mx-auto max-w-7xl py-24 px-4 sm:px-6 sm:py-32 lg:px-8">
+    <section aria-labelledby="perks-heading" class=" bg-slate-50">
+
+        <div class="mx-auto max-w-7xl py-14 px-4 sm:px-6 sm:py-22 lg:px-8">
             <div class="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-0">
 
                 <div class="text-center md:flex md:items-start md:text-left lg:block lg:text-center">
                     <div class="md:flex-shrink-0">
                         <div class="flow-root">
                             <img class="-my-1 mx-auto h-24 w-auto"
-                                src="https://tailwindui.com/img/ecommerce/icons/icon-returns-light.svg" alt="">
+                                src="{{ asset('storage/img/3.svg') }}" alt="">
                         </div>
                     </div>
                     <div class="mt-6 md:mt-0 md:ml-4 lg:mt-6 lg:ml-0">
@@ -48,8 +48,8 @@
                 <div class="text-center md:flex md:items-start md:text-left lg:block lg:text-center">
                     <div class="md:flex-shrink-0">
                         <div class="flow-root">
-                            <img class="-my-1 mx-auto h-24 w-auto"
-                                src="https://tailwindui.com/img/ecommerce/icons/icon-calendar-light.svg" alt="">
+                            <img class="-my-1 mx-auto h-24 w-auto" src="{{ asset('storage/img/1.svg') }}" alt="">
+
                         </div>
                     </div>
                     <div class="mt-6 md:mt-0 md:ml-4 lg:mt-6 lg:ml-0">
@@ -63,7 +63,7 @@
                     <div class="md:flex-shrink-0">
                         <div class="flow-root">
                             <img class="-my-1 mx-auto h-24 w-auto"
-                                src="https://tailwindui.com/img/ecommerce/icons/icon-gift-card-light.svg" alt="">
+                                src="{{ asset('storage/img/2.svg') }}" alt="">
                         </div>
                     </div>
                     <div class="mt-6 md:mt-0 md:ml-4 lg:mt-6 lg:ml-0">
@@ -77,7 +77,7 @@
                     <div class="md:flex-shrink-0">
                         <div class="flow-root">
                             <img class="-my-1 mx-auto h-24 w-auto"
-                                src="https://tailwindui.com/img/ecommerce/icons/icon-planet-light.svg" alt="">
+                                src="{{ asset('storage/img/4.svg') }}" alt="">
                         </div>
                     </div>
                     <div class="mt-6 md:mt-0 md:ml-4 lg:mt-6 lg:ml-0">
@@ -90,269 +90,284 @@
             </div>
         </div>
     </section>
-    
-    <section class="h-screen bg-gray-100 flex items-center justify-center gap-7">
-        <div class="relative bg-white text-gray-700 w-72 min-h-[10rem] shadow-lg rounded-lg overflow-hidden">
-            <img class="w-full h-full object-cover" src="{{ asset('storage/pages/headphone.jpg') }}" alt="">
 
-            <button
-                class="absolute start-4 top-4 z-10 bg-white p-1.5 bg-rose-500/95 hover:bg-rose-600/90 px-3 py-0.5 rounded-md text-white font-sm font-readex tracking-wider transition ">
-                New
-            </button>
-            <div class="p-5 flex flex-col gap-3">
-
-                {{-- badge --}}
-                <div class="flex items-center gap-2">
-                    <span class="px-3 py-1 rounded-full text-xs bg-slate-100 ">stock read</span>
-                    <span class="px-3 py-1 rounded-full text-xs bg-slate-100 ">officiel store</span>
-                </div>
-
-                {{-- product title --}}
-                <h2 class="font-semibold font-roboto text-2xl overflow-ellipsis overflow-hidden whitespace-nowrap">
-                    Best Headphone Ever
-                </h2>
-
-                {{-- product price --}}
-                <div>
-                    <span class="text-xl font-bold font-roboto">
-                        199.00 DH
-                    </span>
-                </div>
-                <div class="flex items-center gap-2 mt-1">
-                    <span class="text-sm font-roboto line-through opacity-50">
-                        499.00 DH
-                    </span>
-                    <span class="bg-green-400 px-1.5 py-0.5 rounded-md text-xs text-white">
-                        save 55%
-                    </span>
-                </div>
-
-                {{-- product rating --}}
-                <span class="flex items-center mt-1">
-                    <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                    <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                    <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                    <img src="{{ asset('storage/pages/star-half-fill.svg') }}" alt="">
-                    <img src="{{ asset('storage/pages/star-no-fill.svg') }}" alt="">
-                    <span class="text-xs ml-2 text-gray-500"> 2k reviews </span>
+    <section class=" bg-slate-50">
+        <div class="flex items-center justify-between px-16 ">
+            <div class="font-bold text-2xl font-roboto">
+                <h2>New Arrivals</h2>
+            </div>
+            <div class="flex items-center justify-center">
+                <a class="font-medium text-sm font-roboto text-rose-500" href="">See More</a>
+                <span>
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F43F5E">
+                        <path
+                            d="M12.1717 12.0005L9.34326 9.17203L10.7575 7.75781L15.0001 12.0005L10.7575 16.2431L9.34326 14.8289L12.1717 12.0005Z">
+                        </path>
+                    </svg>
                 </span>
+            </div>
+        </div>
+        <div class="bg-slate-50 flex items-center justify-center gap-7 py-10">
+            <div class="relative bg-white text-gray-700 w-72 min-h-[10rem] shadow-lg rounded-lg overflow-hidden">
+                <img class="w-full h-full object-cover" src="{{ asset('storage/pages/headphone.jpg') }}" alt="">
 
-                {{-- product action button --}}
-                <div class="mt-5 flex gap-2">
-                    <button
-                        class="bg-rose-500/95 hover:bg-rose-600/90 px-6 py-2 rounded-md text-white font-roboto font-medium tracking-wider transition ">
-                        Add to cart
-                    </button>
+                <button
+                    class="absolute start-4 top-4 z-10 bg-white p-1.5 bg-rose-500/95 hover:bg-rose-600/90 px-3 py-0.5 rounded-md text-white font-sm font-readex tracking-wider transition ">
+                    New
+                </button>
+                <div class="p-5 flex flex-col gap-3">
 
-                    <button
-                        class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
-                        <img class="opacity-50 " src="{{ asset('storage/pages/love.svg') }}" alt="">
-                    </button>
-                    <button
-                        class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
-                        <img class="opacity-50 " src="{{ asset('storage/pages/eye.svg') }}" alt="">
-                    </button>
+                    {{-- badge --}}
+                    <div class="flex items-center gap-2">
+                        <span class="px-3 py-1 rounded-full text-xs bg-slate-100 ">stock read</span>
+                        <span class="px-3 py-1 rounded-full text-xs bg-slate-100 ">officiel store</span>
+                    </div>
+
+                    {{-- product title --}}
+                    <h2 class="font-semibold font-roboto text-2xl overflow-ellipsis overflow-hidden whitespace-nowrap">
+                        Best Headphone Ever
+                    </h2>
+
+                    {{-- product price --}}
+                    <div>
+                        <span class="text-xl font-bold font-roboto">
+                            199.00 DH
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-2 mt-1">
+                        <span class="text-sm font-roboto line-through opacity-50">
+                            499.00 DH
+                        </span>
+                        <span class="bg-green-400 px-1.5 py-0.5 rounded-md text-xs text-white">
+                            save 55%
+                        </span>
+                    </div>
+
+                    {{-- product rating --}}
+                    <span class="flex items-center mt-1">
+                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
+                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
+                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
+                        <img src="{{ asset('storage/pages/star-half-fill.svg') }}" alt="">
+                        <img src="{{ asset('storage/pages/star-no-fill.svg') }}" alt="">
+                        <span class="text-xs ml-2 text-gray-500"> 2k reviews </span>
+                    </span>
+
+                    {{-- product action button --}}
+                    <div class="mt-5 flex gap-2">
+                        <button
+                            class="bg-rose-500/95 hover:bg-rose-600/90 px-6 py-2 rounded-md text-white font-roboto font-medium tracking-wider transition ">
+                            Add to cart
+                        </button>
+
+                        <button
+                            class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
+                            <img class="opacity-50 " src="{{ asset('storage/pages/love.svg') }}" alt="">
+                        </button>
+                        <button
+                            class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
+                            <img class="opacity-50 " src="{{ asset('storage/pages/eye.svg') }}" alt="">
+                        </button>
+                    </div>
+
                 </div>
+
 
             </div>
 
+            <div class="relative bg-white text-gray-700 w-72 min-h-[10rem] shadow-lg rounded-lg overflow-hidden">
+                <img class="w-full h-full object-cover" src="{{ asset('storage/pages/headphone.jpg') }}" alt="">
+                <div class="p-5 flex flex-col gap-3">
 
-        </div>
+                    {{-- badge --}}
+                    <div class="flex items-center gap-2">
+                        <span class="px-3 py-1 rounded-full text-xs bg-slate-100 ">stock read</span>
+                        <span class="px-3 py-1 rounded-full text-xs bg-slate-100 ">officiel store</span>
+                    </div>
 
-        <div class="relative bg-white text-gray-700 w-72 min-h-[10rem] shadow-lg rounded-lg overflow-hidden">
-            <img class="w-full h-full object-cover" src="{{ asset('storage/pages/headphone.jpg') }}" alt="">
-            <div class="p-5 flex flex-col gap-3">
+                    {{-- product title --}}
+                    <h2 class="font-semibold font-roboto text-2xl overflow-ellipsis overflow-hidden whitespace-nowrap">
+                        Best Headphone Ever
+                    </h2>
 
-                {{-- badge --}}
-                <div class="flex items-center gap-2">
-                    <span class="px-3 py-1 rounded-full text-xs bg-slate-100 ">stock read</span>
-                    <span class="px-3 py-1 rounded-full text-xs bg-slate-100 ">officiel store</span>
-                </div>
+                    {{-- product price --}}
+                    <div>
+                        <span class="text-xl font-bold font-roboto">
+                            199.00 DH
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-2 mt-1">
+                        <span class="text-sm font-roboto line-through opacity-50">
+                            499.00 DH
+                        </span>
+                        <span class="bg-green-400 px-1.5 py-0.5 rounded-md text-xs text-white">
+                            save 55%
+                        </span>
+                    </div>
 
-                {{-- product title --}}
-                <h2 class="font-semibold font-roboto text-2xl overflow-ellipsis overflow-hidden whitespace-nowrap">
-                    Best Headphone Ever
-                </h2>
-
-                {{-- product price --}}
-                <div>
-                    <span class="text-xl font-bold font-roboto">
-                        199.00 DH
+                    {{-- product rating --}}
+                    <span class="flex items-center mt-1">
+                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
+                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
+                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
+                        <img src="{{ asset('storage/pages/star-half-fill.svg') }}" alt="">
+                        <img src="{{ asset('storage/pages/star-no-fill.svg') }}" alt="">
+                        <span class="text-xs ml-2 text-gray-500"> 2k reviews </span>
                     </span>
-                </div>
-                <div class="flex items-center gap-2 mt-1">
-                    <span class="text-sm font-roboto line-through opacity-50">
-                        499.00 DH
-                    </span>
-                    <span class="bg-green-400 px-1.5 py-0.5 rounded-md text-xs text-white">
-                        save 55%
-                    </span>
+
+                    {{-- product action button --}}
+                    <div class="mt-5 flex gap-2">
+                        <button
+                            class="bg-rose-500/95 hover:bg-rose-600/90 px-6 py-2 rounded-md text-white font-roboto font-medium tracking-wider transition ">
+                            Add to cart
+                        </button>
+
+                        <button
+                            class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
+                            <img class="opacity-50 " src="{{ asset('storage/pages/love.svg') }}" alt="">
+                        </button>
+                        <button
+                            class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
+                            <img class="opacity-50 " src="{{ asset('storage/pages/eye.svg') }}" alt="">
+                        </button>
+                    </div>
+
                 </div>
 
-                {{-- product rating --}}
-                <span class="flex items-center mt-1">
-                    <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                    <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                    <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                    <img src="{{ asset('storage/pages/star-half-fill.svg') }}" alt="">
-                    <img src="{{ asset('storage/pages/star-no-fill.svg') }}" alt="">
-                    <span class="text-xs ml-2 text-gray-500"> 2k reviews </span>
-                </span>
-
-                {{-- product action button --}}
-                <div class="mt-5 flex gap-2">
-                    <button
-                        class="bg-rose-500/95 hover:bg-rose-600/90 px-6 py-2 rounded-md text-white font-roboto font-medium tracking-wider transition ">
-                        Add to cart
-                    </button>
-
-                    <button
-                        class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
-                        <img class="opacity-50 " src="{{ asset('storage/pages/love.svg') }}" alt="">
-                    </button>
-                    <button
-                        class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
-                        <img class="opacity-50 " src="{{ asset('storage/pages/eye.svg') }}" alt="">
-                    </button>
-                </div>
 
             </div>
 
+            <div class="relative bg-white text-gray-700 w-72 min-h-[10rem] shadow-lg rounded-lg overflow-hidden">
+                <img class="w-full h-full object-cover" src="{{ asset('storage/pages/headphone.jpg') }}" alt="">
 
-        </div>
+                <div class="p-5 flex flex-col gap-3">
 
-        <div class="relative bg-white text-gray-700 w-72 min-h-[10rem] shadow-lg rounded-lg overflow-hidden">
-            <img class="w-full h-full object-cover" src="{{ asset('storage/pages/headphone.jpg') }}" alt="">
+                    {{-- badge --}}
+                    <div class="flex items-center gap-2">
+                        <span class="px-3 py-1 rounded-full text-xs bg-slate-100 ">stock read</span>
+                        <span class="px-3 py-1 rounded-full text-xs bg-slate-100 ">officiel store</span>
+                    </div>
 
-            <div class="p-5 flex flex-col gap-3">
+                    {{-- product title --}}
+                    <h2 class="font-semibold font-roboto text-2xl overflow-ellipsis overflow-hidden whitespace-nowrap">
+                        Best Headphone Ever
+                    </h2>
 
-                {{-- badge --}}
-                <div class="flex items-center gap-2">
-                    <span class="px-3 py-1 rounded-full text-xs bg-slate-100 ">stock read</span>
-                    <span class="px-3 py-1 rounded-full text-xs bg-slate-100 ">officiel store</span>
-                </div>
+                    {{-- product price --}}
+                    <div>
+                        <span class="text-xl font-bold font-roboto">
+                            199.00 DH
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-2 mt-1">
+                        <span class="text-sm font-roboto line-through opacity-50">
+                            499.00 DH
+                        </span>
+                        <span class="bg-green-400 px-1.5 py-0.5 rounded-md text-xs text-white">
+                            save 55%
+                        </span>
+                    </div>
 
-                {{-- product title --}}
-                <h2 class="font-semibold font-roboto text-2xl overflow-ellipsis overflow-hidden whitespace-nowrap">
-                    Best Headphone Ever
-                </h2>
-
-                {{-- product price --}}
-                <div>
-                    <span class="text-xl font-bold font-roboto">
-                        199.00 DH
+                    {{-- product rating --}}
+                    <span class="flex items-center mt-1">
+                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
+                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
+                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
+                        <img src="{{ asset('storage/pages/star-half-fill.svg') }}" alt="">
+                        <img src="{{ asset('storage/pages/star-no-fill.svg') }}" alt="">
+                        <span class="text-xs ml-2 text-gray-500"> 2k reviews </span>
                     </span>
+
+                    {{-- product action button --}}
+                    <div class="mt-5 flex gap-2">
+                        <button
+                            class="bg-rose-500/95 hover:bg-rose-600/90 px-6 py-2 rounded-md text-white font-roboto font-medium tracking-wider transition ">
+                            Add to cart
+                        </button>
+
+                        <button
+                            class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
+                            <img class="opacity-50 " src="{{ asset('storage/pages/love.svg') }}" alt="">
+                        </button>
+                        <button
+                            class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
+                            <img class="opacity-50 " src="{{ asset('storage/pages/eye.svg') }}" alt="">
+                        </button>
+                    </div>
+
                 </div>
-                <div class="flex items-center gap-2 mt-1">
-                    <span class="text-sm font-roboto line-through opacity-50">
-                        499.00 DH
+            </div>
+
+            <div class="relative bg-white text-gray-700 w-72 min-h-[10rem] shadow-lg rounded-lg overflow-hidden">
+                <img class="w-full h-full object-cover" src="{{ asset('storage/pages/headphone.jpg') }}" alt="">
+
+                <button
+                    class="absolute start-0 top-0 z-10 p-1.5 py-2 bg-rose-600 px-3 rounded-br-md text-white font-sm font-readex tracking-wider transition ">
+                    hot
+                </button>
+                <div class="p-5 flex flex-col gap-3">
+
+                    {{-- badge --}}
+                    <div class="flex items-center gap-2">
+                        <span class="px-3 py-1 rounded-full text-xs bg-slate-100 ">stock read</span>
+                        <span class="px-3 py-1 rounded-full text-xs bg-slate-100 ">officiel store</span>
+                    </div>
+
+                    {{-- product title --}}
+                    <h2 class="font-semibold font-roboto text-2xl overflow-ellipsis overflow-hidden whitespace-nowrap">
+                        Best Headphone Ever
+                    </h2>
+
+                    {{-- product price --}}
+                    <div>
+                        <span class="text-xl font-bold font-roboto">
+                            199.00 DH
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-2 mt-1">
+                        <span class="text-sm font-roboto line-through opacity-50">
+                            499.00 DH
+                        </span>
+                        <span class="bg-green-400 px-1.5 py-0.5 rounded-md text-xs text-white">
+                            save 55%
+                        </span>
+                    </div>
+
+                    {{-- product rating --}}
+                    <span class="flex items-center mt-1">
+                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
+                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
+                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
+                        <img src="{{ asset('storage/pages/star-half-fill.svg') }}" alt="">
+                        <img src="{{ asset('storage/pages/star-no-fill.svg') }}" alt="">
+                        <span class="text-xs ml-2 text-gray-500"> 2k reviews </span>
                     </span>
-                    <span class="bg-green-400 px-1.5 py-0.5 rounded-md text-xs text-white">
-                        save 55%
-                    </span>
-                </div>
 
-                {{-- product rating --}}
-                <span class="flex items-center mt-1">
-                    <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                    <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                    <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                    <img src="{{ asset('storage/pages/star-half-fill.svg') }}" alt="">
-                    <img src="{{ asset('storage/pages/star-no-fill.svg') }}" alt="">
-                    <span class="text-xs ml-2 text-gray-500"> 2k reviews </span>
-                </span>
+                    {{-- product action button --}}
+                    <div class="mt-5 flex gap-2">
+                        <button
+                            class="bg-rose-500/95 hover:bg-rose-600/90 px-6 py-2 rounded-md text-white font-roboto font-medium tracking-wider transition ">
+                            Add to cart
+                        </button>
 
-                {{-- product action button --}}
-                <div class="mt-5 flex gap-2">
-                    <button
-                        class="bg-rose-500/95 hover:bg-rose-600/90 px-6 py-2 rounded-md text-white font-roboto font-medium tracking-wider transition ">
-                        Add to cart
-                    </button>
+                        <button
+                            class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
+                            <img class="opacity-50 " src="{{ asset('storage/pages/love.svg') }}" alt="">
+                        </button>
+                        <button
+                            class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
+                            <img class="opacity-50 " src="{{ asset('storage/pages/eye.svg') }}" alt="">
+                        </button>
+                    </div>
 
-                    <button
-                        class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
-                        <img class="opacity-50 " src="{{ asset('storage/pages/love.svg') }}" alt="">
-                    </button>
-                    <button
-                        class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
-                        <img class="opacity-50 " src="{{ asset('storage/pages/eye.svg') }}" alt="">
-                    </button>
                 </div>
 
             </div>
-
-
         </div>
 
-        <div class="relative bg-white text-gray-700 w-72 min-h-[10rem] shadow-lg rounded-lg overflow-hidden">
-            <img class="w-full h-full object-cover" src="{{ asset('storage/pages/headphone.jpg') }}" alt="">
-
-            <button
-                class="absolute start-0 top-0 z-10 p-1.5 py-2 bg-rose-600 px-3 rounded-br-md text-white font-sm font-readex tracking-wider transition ">
-                hot
-            </button>
-            <div class="p-5 flex flex-col gap-3">
-
-                {{-- badge --}}
-                <div class="flex items-center gap-2">
-                    <span class="px-3 py-1 rounded-full text-xs bg-slate-100 ">stock read</span>
-                    <span class="px-3 py-1 rounded-full text-xs bg-slate-100 ">officiel store</span>
-                </div>
-
-                {{-- product title --}}
-                <h2 class="font-semibold font-roboto text-2xl overflow-ellipsis overflow-hidden whitespace-nowrap">
-                    Best Headphone Ever
-                </h2>
-
-                {{-- product price --}}
-                <div>
-                    <span class="text-xl font-bold font-roboto">
-                        199.00 DH
-                    </span>
-                </div>
-                <div class="flex items-center gap-2 mt-1">
-                    <span class="text-sm font-roboto line-through opacity-50">
-                        499.00 DH
-                    </span>
-                    <span class="bg-green-400 px-1.5 py-0.5 rounded-md text-xs text-white">
-                        save 55%
-                    </span>
-                </div>
-
-                {{-- product rating --}}
-                <span class="flex items-center mt-1">
-                    <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                    <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                    <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                    <img src="{{ asset('storage/pages/star-half-fill.svg') }}" alt="">
-                    <img src="{{ asset('storage/pages/star-no-fill.svg') }}" alt="">
-                    <span class="text-xs ml-2 text-gray-500"> 2k reviews </span>
-                </span>
-
-                {{-- product action button --}}
-                <div class="mt-5 flex gap-2">
-                    <button
-                        class="bg-rose-500/95 hover:bg-rose-600/90 px-6 py-2 rounded-md text-white font-roboto font-medium tracking-wider transition ">
-                        Add to cart
-                    </button>
-
-                    <button
-                        class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
-                        <img class="opacity-50 " src="{{ asset('storage/pages/love.svg') }}" alt="">
-                    </button>
-                    <button
-                        class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
-                        <img class="opacity-50 " src="{{ asset('storage/pages/eye.svg') }}" alt="">
-                    </button>
-                </div>
-
-            </div>
-
-
-        </div>
     </section>
 
-    <section class="overflow-hidden rounded-lg shadow-2xl md:grid md:grid-cols-3">
+    <section class="overflow-hidden rounded-lg px-16 shadow-2xl md:grid md:grid-cols-3">
         <img alt=""
             src="https://images.unsplash.com/photo-1611510338559-2f463335092c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80"
             class="h-32 w-full object-cover md:h-full" />
@@ -377,7 +392,7 @@
         </div>
     </section>
 
-    <section>
+    {{-- <section>
         <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
             <header>
                 <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Product Collection</h2>
@@ -658,8 +673,6 @@
                 </li>
             </ul>
         </div>
-    </section>
-
-
+    </section> --}}
 @endsection
 @include('layouts.app')

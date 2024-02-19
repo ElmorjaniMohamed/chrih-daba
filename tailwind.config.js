@@ -6,6 +6,11 @@ module.exports = {
         "./resources/**/*.vue",
       ],
   theme: {
+    fontFamily: {
+        'lora': ['Lora', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif'],
+        'readex': ['Readex Pro', 'sans-serif'],
+      },
     extend: {},
   },
   plugins: [],

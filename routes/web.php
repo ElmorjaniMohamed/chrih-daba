@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
 Route::get('/', function () {
     return view('home');
 });

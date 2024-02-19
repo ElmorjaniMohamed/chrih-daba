@@ -4,8 +4,7 @@
         <div class="relative group bg-gray-900 py-14">
             <!-- Decorative image and overlay -->
             <div aria-hidden="true" class="absolute inset-0 overflow-hidden opacity-85 sm:h-auto">
-                <img src="{{ asset('storage/pages/shop.jpg') }}" alt=""
-                    class="h-screen w-full object-cover object-center">
+                <img src="{{ asset('img/shop.jpg') }}" alt="" class="h-screen w-full object-cover object-center">
             </div>
 
             <div
@@ -34,8 +33,7 @@
                 <div class="text-center md:flex md:items-start md:text-left lg:block lg:text-center">
                     <div class="md:flex-shrink-0">
                         <div class="flow-root">
-                            <img class="-my-1 mx-auto h-24 w-auto"
-                                src="{{ asset('storage/img/3.svg') }}" alt="">
+                            <img class="-my-1 mx-auto h-24 w-auto" src="{{ asset('img/3.svg') }}" alt="">
                         </div>
                     </div>
                     <div class="mt-6 md:mt-0 md:ml-4 lg:mt-6 lg:ml-0">
@@ -48,7 +46,7 @@
                 <div class="text-center md:flex md:items-start md:text-left lg:block lg:text-center">
                     <div class="md:flex-shrink-0">
                         <div class="flow-root">
-                            <img class="-my-1 mx-auto h-24 w-auto" src="{{ asset('storage/img/1.svg') }}" alt="">
+                            <img class="-my-1 mx-auto h-24 w-auto" src="{{ asset('img/1.svg') }}" alt="">
 
                         </div>
                     </div>
@@ -62,8 +60,7 @@
                 <div class="text-center md:flex md:items-start md:text-left lg:block lg:text-center">
                     <div class="md:flex-shrink-0">
                         <div class="flow-root">
-                            <img class="-my-1 mx-auto h-24 w-auto"
-                                src="{{ asset('storage/img/2.svg') }}" alt="">
+                            <img class="-my-1 mx-auto h-24 w-auto" src="{{ asset('img/2.svg') }}" alt="">
                         </div>
                     </div>
                     <div class="mt-6 md:mt-0 md:ml-4 lg:mt-6 lg:ml-0">
@@ -76,8 +73,7 @@
                 <div class="text-center md:flex md:items-start md:text-left lg:block lg:text-center">
                     <div class="md:flex-shrink-0">
                         <div class="flow-root">
-                            <img class="-my-1 mx-auto h-24 w-auto"
-                                src="{{ asset('storage/img/4.svg') }}" alt="">
+                            <img class="-my-1 mx-auto h-24 w-auto" src="{{ asset('img/4.svg') }}" alt="">
                         </div>
                     </div>
                     <div class="mt-6 md:mt-0 md:ml-4 lg:mt-6 lg:ml-0">
@@ -109,7 +105,7 @@
         </div>
         <div class="bg-slate-50 flex items-center justify-center gap-7 py-10">
             <div class="relative bg-white text-gray-700 w-72 min-h-[10rem] shadow-lg rounded-lg overflow-hidden">
-                <img class="w-full h-full object-cover" src="{{ asset('storage/pages/headphone.jpg') }}" alt="">
+                <img class="w-full h-full object-cover" src="{{ asset('img/headphone.jpg') }}" alt="">
 
                 <button
                     class="absolute start-4 top-4 z-10 bg-white p-1.5 bg-rose-500/95 hover:bg-rose-600/90 px-3 py-0.5 rounded-md text-white font-sm font-readex tracking-wider transition ">
@@ -145,11 +141,11 @@
 
                     {{-- product rating --}}
                     <span class="flex items-center mt-1">
-                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                        <img src="{{ asset('storage/pages/star-half-fill.svg') }}" alt="">
-                        <img src="{{ asset('storage/pages/star-no-fill.svg') }}" alt="">
+                        <img src="{{ asset('img/star.svg') }}" alt="">
+                        <img src="{{ asset('img/star.svg') }}" alt="">
+                        <img src="{{ asset('img/star.svg') }}" alt="">
+                        <img src="{{ asset('img/star-half-fill.svg') }}" alt="">
+                        <img src="{{ asset('img/star-no-fill.svg') }}" alt="">
                         <span class="text-xs ml-2 text-gray-500"> 2k reviews </span>
                     </span>
 
@@ -162,11 +158,11 @@
 
                         <button
                             class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
-                            <img class="opacity-50 " src="{{ asset('storage/pages/love.svg') }}" alt="">
+                            <img class="opacity-50 " src="{{ asset('img/love.svg') }}" alt="">
                         </button>
                         <button
                             class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
-                            <img class="opacity-50 " src="{{ asset('storage/pages/eye.svg') }}" alt="">
+                            <img class="opacity-50 " src="{{ asset('img/eye.svg') }}" alt="">
                         </button>
                     </div>
 
@@ -176,7 +172,7 @@
             </div>
 
             <div class="relative bg-white text-gray-700 w-72 min-h-[10rem] shadow-lg rounded-lg overflow-hidden">
-                <img class="w-full h-full object-cover" src="{{ asset('storage/pages/headphone.jpg') }}" alt="">
+                <img class="w-full h-full object-cover" src="{{ asset('img/headphone.jpg') }}" alt="">
                 <div class="p-5 flex flex-col gap-3">
 
                     {{-- badge --}}
@@ -207,11 +203,11 @@
 
                     {{-- product rating --}}
                     <span class="flex items-center mt-1">
-                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                        <img src="{{ asset('storage/pages/star-half-fill.svg') }}" alt="">
-                        <img src="{{ asset('storage/pages/star-no-fill.svg') }}" alt="">
+                        <img src="{{ asset('img/star.svg') }}" alt="">
+                        <img src="{{ asset('img/star.svg') }}" alt="">
+                        <img src="{{ asset('img/star.svg') }}" alt="">
+                        <img src="{{ asset('img/star-half-fill.svg') }}" alt="">
+                        <img src="{{ asset('img/star-no-fill.svg') }}" alt="">
                         <span class="text-xs ml-2 text-gray-500"> 2k reviews </span>
                     </span>
 
@@ -224,11 +220,11 @@
 
                         <button
                             class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
-                            <img class="opacity-50 " src="{{ asset('storage/pages/love.svg') }}" alt="">
+                            <img class="opacity-50 " src="{{ asset('img/love.svg') }}" alt="">
                         </button>
                         <button
                             class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
-                            <img class="opacity-50 " src="{{ asset('storage/pages/eye.svg') }}" alt="">
+                            <img class="opacity-50 " src="{{ asset('img/eye.svg') }}" alt="">
                         </button>
                     </div>
 
@@ -238,7 +234,7 @@
             </div>
 
             <div class="relative bg-white text-gray-700 w-72 min-h-[10rem] shadow-lg rounded-lg overflow-hidden">
-                <img class="w-full h-full object-cover" src="{{ asset('storage/pages/headphone.jpg') }}" alt="">
+                <img class="w-full h-full object-cover" src="{{ asset('img/headphone.jpg') }}" alt="">
 
                 <div class="p-5 flex flex-col gap-3">
 
@@ -270,11 +266,11 @@
 
                     {{-- product rating --}}
                     <span class="flex items-center mt-1">
-                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                        <img src="{{ asset('storage/pages/star-half-fill.svg') }}" alt="">
-                        <img src="{{ asset('storage/pages/star-no-fill.svg') }}" alt="">
+                        <img src="{{ asset('img/star.svg') }}" alt="">
+                        <img src="{{ asset('img/star.svg') }}" alt="">
+                        <img src="{{ asset('img/star.svg') }}" alt="">
+                        <img src="{{ asset('img/star-half-fill.svg') }}" alt="">
+                        <img src="{{ asset('img/star-no-fill.svg') }}" alt="">
                         <span class="text-xs ml-2 text-gray-500"> 2k reviews </span>
                     </span>
 
@@ -287,11 +283,11 @@
 
                         <button
                             class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
-                            <img class="opacity-50 " src="{{ asset('storage/pages/love.svg') }}" alt="">
+                            <img class="opacity-50 " src="{{ asset('img/love.svg') }}" alt="">
                         </button>
                         <button
                             class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
-                            <img class="opacity-50 " src="{{ asset('storage/pages/eye.svg') }}" alt="">
+                            <img class="opacity-50 " src="{{ asset('img/eye.svg') }}" alt="">
                         </button>
                     </div>
 
@@ -299,7 +295,7 @@
             </div>
 
             <div class="relative bg-white text-gray-700 w-72 min-h-[10rem] shadow-lg rounded-lg overflow-hidden">
-                <img class="w-full h-full object-cover" src="{{ asset('storage/pages/headphone.jpg') }}" alt="">
+                <img class="w-full h-full object-cover" src="{{ asset('img/headphone.jpg') }}" alt="">
 
                 <button
                     class="absolute start-0 top-0 z-10 p-1.5 py-2 bg-rose-600 px-3 rounded-br-md text-white font-sm font-readex tracking-wider transition ">
@@ -335,11 +331,11 @@
 
                     {{-- product rating --}}
                     <span class="flex items-center mt-1">
-                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                        <img src="{{ asset('storage/pages/star.svg') }}" alt="">
-                        <img src="{{ asset('storage/pages/star-half-fill.svg') }}" alt="">
-                        <img src="{{ asset('storage/pages/star-no-fill.svg') }}" alt="">
+                        <img src="{{ asset('img/star.svg') }}" alt="">
+                        <img src="{{ asset('img/star.svg') }}" alt="">
+                        <img src="{{ asset('img/star.svg') }}" alt="">
+                        <img src="{{ asset('img/star-half-fill.svg') }}" alt="">
+                        <img src="{{ asset('img/star-no-fill.svg') }}" alt="">
                         <span class="text-xs ml-2 text-gray-500"> 2k reviews </span>
                     </span>
 
@@ -352,11 +348,11 @@
 
                         <button
                             class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
-                            <img class="opacity-50 " src="{{ asset('storage/pages/love.svg') }}" alt="">
+                            <img class="opacity-50 " src="{{ asset('img/love.svg') }}" alt="">
                         </button>
                         <button
                             class="flex-grow flex items-center justify-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md ">
-                            <img class="opacity-50 " src="{{ asset('storage/pages/eye.svg') }}" alt="">
+                            <img class="opacity-50 " src="{{ asset('img/eye.svg') }}" alt="">
                         </button>
                     </div>
 
@@ -367,27 +363,28 @@
 
     </section>
 
-    <section class="overflow-hidden rounded-lg px-16 shadow-2xl md:grid md:grid-cols-3">
-        <img alt=""
-            src="https://images.unsplash.com/photo-1611510338559-2f463335092c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80"
-            class="h-32 w-full object-cover md:h-full" />
+    <section class="overflow-hidden  bg-slate-50 rounded-lg px-22 m-16 h-fit shadow-2xl md:grid md:grid-cols-3">
+        <div>
+            <img class="w-[50rem] h-96" alt="" src="{{ asset('img/woman (2).jpg') }}"
+                class="h-32 w-full object-cover md:h-full" />
+        </div>
 
         <div class="p-4 text-center sm:p-6 md:col-span-2 lg:p-8">
-            <p class="text-sm font-semibold uppercase tracking-widest">Run with the pack</p>
+            <p class="text-sm font-semibold text-slate-700 uppercase tracking-widest">Run with the pack</p>
 
             <h2 class="mt-6 font-black uppercase">
-                <span class="text-4xl font-black sm:text-5xl lg:text-6xl"> Get 20% off </span>
+                <span class="text-4xl font-black sm:text-5xl lg:text-6xl text-rose-500"> Get 20% off </span>
 
-                <span class="mt-2 block text-sm">On your next order over $50</span>
+                <span class="mt-2 block text-slate-700 text-sm">On your next order over $50</span>
             </h2>
 
-            <a class="mt-8 inline-block w-full bg-black py-4 text-sm font-bold uppercase tracking-widest text-white"
+            <a class="mt-8 inline-block w-full bg-rose-500 py-4 text-sm rounded-md font-bold uppercase tracking-widest text-white"
                 href="#">
                 Get Discount
             </a>
 
             <p class="mt-8 text-xs font-medium uppercase text-gray-400">
-                Offer valid until 24th March, 2021 *
+                Offer valid until 24th March, 2024
             </p>
         </div>
     </section>

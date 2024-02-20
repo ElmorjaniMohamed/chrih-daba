@@ -18,7 +18,7 @@ Route::group(['prefix' => 'admin'], function () {
 });
 Route::get('/', function () {
     return view('home');
-});
+})->name('officialhome');
 
 Route::get('/cart', function () {
     return view('cart');

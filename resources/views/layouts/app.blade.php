@@ -480,10 +480,10 @@
                                 <!-- Flyout menus -->
                                 <div class="inset-x-0 bottom-0 px-4" x-data="Components.popoverGroup()" x-init="init()">
                                     <div class="flex h-full justify-center space-x-8">
-                                        <a href="#"
+                                        <a href="{{ route('officialhome') }}"
                                             class="flex items-center text-sm font-medium text-white">Home</a>
 
-                                        <a href="#"
+                                        <a href="{{ route('product-list') }}"
                                             class="flex items-center text-sm font-medium text-white">Store</a>
 
                                         <a href="#"

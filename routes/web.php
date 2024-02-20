@@ -20,6 +20,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/cart', function () {
+    return view('cart');
+})->name('cart');
+
 Route::get('/home', function () {
     return view('home');
 })->middleware(['auth', 'verified'])->name('home');

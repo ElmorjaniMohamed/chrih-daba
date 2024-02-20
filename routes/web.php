@@ -24,6 +24,10 @@ Route::get('/cart', function () {
     return view('cart');
 })->name('cart');
 
+Route::get('/product-list', function () {
+    return view('product-list');
+})->name('product-list');
+
 Route::get('/home', function () {
     return view('home');
 })->middleware(['auth', 'verified'])->name('home');

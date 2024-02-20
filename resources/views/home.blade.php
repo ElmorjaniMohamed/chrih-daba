@@ -1,24 +1,102 @@
 @section('content')
+    <style>
+        /* HTML: <div class="ribbon">Your text content</div> */
+        .ribbon {
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .ribbon {
+            --f: .5em;
+            /* control the folded part */
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            line-height: 1.8;
+            padding-inline: 1lh;
+            padding-bottom: var(--f);
+            border-image: conic-gradient(#0008 0 0) 51%/var(--f);
+            clip-path: polygon(100% calc(100% - var(--f)), 100% 100%, calc(100% - var(--f)) calc(100% - var(--f)), var(--f) calc(100% - var(--f)), 0 100%, 0 calc(100% - var(--f)), 999px calc(100% - var(--f) - 999px), calc(100% - 999px) calc(100% - var(--f) - 999px));
+            transform: translate(calc((1 - cos(45deg))*100%), -100%) rotate(45deg);
+            transform-origin: 0% 100%;
+            background-color: #F43F5E;
+            /* the main color  */
+        }
+
+        /* HTML: <div class="ribbon">Your text content</div> */
+        .header {
+            font-size: 40px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .header {
+            --c: #F43F5E;
+            /* control the cutout part (adjust each variable to understand what it does) */
+            --r: .8em;
+            --a: 60deg;
+            /* from 0 to 90deg */
+            --d: .9em;
+
+            padding-inline: .3em;
+            margin: calc(.5lh + var(--r)) calc(1.2lh + var(--d)) 0;
+            line-height: 1.75;
+            background: var(--c);
+            width: fit-content;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .header:before,
+        .header:after {
+            content: "";
+            position: absolute;
+            width: calc(1lh + var(--d));
+            height: calc(1.5lh + var(--r));
+            bottom: 0;
+            border: solid var(--c);
+            box-sizing: border-box;
+        }
+
+        .header:before {
+            left: 99%;
+            border-width: 0 1lh 1lh 0;
+            border-radius: 0 0 999px 0;
+            clip-path: polygon(calc(999px*cos(var(--a))) calc(100% - 1lh - var(--d) + 999px*sin(var(--a))), 999px 0, 100% 0, calc(50% + var(--d)/2) var(--r), var(--d) 0, 0 0, 0 calc(100% - 1lh - var(--d)));
+            transform-origin: 0 calc(100% - 1lh - var(--d));
+            rotate: calc(90deg - var(--a));
+        }
+
+        .header:after {
+            right: 99%;
+            border-width: 0 0 1lh 1lh;
+            border-radius: 0 0 0 999px;
+            clip-path: polygon(calc(100% - 999px*cos(var(--a))) calc(100% - 1lh - var(--d) + 999px*sin(var(--a))), -999px 0, 0 0, calc(50% - var(--d)/2) var(--r), calc(100% - var(--d)) 0, 100% 0, 100% calc(100% - 1lh - var(--d)));
+            transform-origin: 100% calc(100% - 1lh - var(--d));
+            rotate: calc(var(--a) - 90deg);
+        }
+    </style>
     <section>
         <!-- Hero section -->
-        <div class="relative group bg-gray-900 py-14">
+        <div class="relative group bg-slate-50 py-14">
             <!-- Decorative image and overlay -->
-            <div aria-hidden="true" class="absolute inset-0 overflow-hidden opacity-85 sm:h-auto">
+            <img src="{{ asset('img/off.svg') }}" class="w-48 h-48 z-40 animate-bounce absolute top-24 left-32" alt="">
+            <div aria-hidden="true" class="absolute inset-0 overflow-hidden opacity-95 sm:h-auto">
                 <img src="{{ asset('img/shop.jpg') }}" alt="" class="h-screen w-full object-cover object-center">
             </div>
 
             <div
                 class="relative pt-40 -mb-6 mx-auto flex flex-col items-center justify-between px-6 text-center sm:pt-96 sm:pb-4 lg:px-0">
                 <div>
-                    <h1 class="text-2xl font-bold font-Roboto tracking-tight text-slate-50 lg:text-6xl">Welcome to CHRIH-DABA
-                    </h1>
-                    <p
-                        class="mt-4 text-xs lg:text-lg font-roboto text-white bg-rose-500 px-5 py-2 rounded-tr-3xl rounded-bl-3xl">
-                        Your Premier Destination for Online Retail Therapy and Unbeatable Deals!</p>
+                    <div class="header text-2xl font-bold font-Roboto tracking-tight text-slate-50 lg:text-6xl">Welcome to
+                        CHRIH-DABA
+                    </div>
                 </div>
                 <div class="mt-8">
                     <a href="#"
-                        class="inline-block rounded-full border border-transparent animate-bounce bg-rose-600 lg:py-3 p-2 lg:px-8 px-6 lg:text-base text-sm  lg:first-line:font-medium text-slate-50 hover:text-rose-500 hover:border-2 hover:border-red-500 hover:bg-slate-50">Shop
+                        class="inline-block rounded-full border font-roboto border-transparent bg-rose-600 lg:py-3 p-2 lg:px-8 px-6 lg:text-base text-sm  lg:first-line:font-medium text-slate-50 hover:text-rose-500 hover:border-2 hover:border-red-500 hover:bg-slate-50">Shop
                         New Arrivals</a>
                 </div>
             </div>
@@ -172,6 +250,10 @@
             </div>
 
             <div class="relative bg-white text-gray-700 w-72 min-h-[10rem] shadow-lg rounded-lg overflow-hidden">
+                <div class="ribbon bg-rose-500 text-white font-bold text-lg relative" style="--f: .5em;">
+                    New
+                </div>
+
                 <img class="w-full h-full object-cover" src="{{ asset('img/headphone.jpg') }}" alt="">
                 <div class="p-5 flex flex-col gap-3">
 
@@ -363,7 +445,7 @@
 
     </section>
 
-    <section class="overflow-hidden  bg-slate-50 rounded-lg px-22 m-16 h-fit shadow-2xl md:grid md:grid-cols-3">
+    <section class="overflow-hidden bg-slate-50 rounded-lg px-22 m-16 h-fit shadow-2xl md:grid md:grid-cols-3">
         <div>
             <img class="w-[50rem] h-96" alt="" src="{{ asset('img/woman (2).jpg') }}"
                 class="h-32 w-full object-cover md:h-full" />

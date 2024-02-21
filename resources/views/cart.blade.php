@@ -94,43 +94,46 @@
                     </a>
                 </div>
 
-                <div id="summary" class="w-1/4 h-fit px-8 py-10 rounded-lg border border-slate-300">
-                    <h1 class="font-semibold text-2xl uppercase font-roboto pb-2">Order Summary</h1>
-                    <hr class="border-1 border-slate-300">
-                    <div class="flex justify-between items-center mt-10 mb-5">
-                        <span
-                            class="font-medium text-sm text-slate-50 font-roboto rounded-full px-2 py-1 bg-green-500 ">Items
-                            3</span>
-                        <span class="text-lg font-semibold text-rose-500 font-readex">499 DH</span>
-                    </div>
-                    <hr class="border-1 border-slate-300">
-                    <div class="flex justify-between items-center mt-3 mb-3">
-                        <span class="text-base font-normal text-slate-800 font-roboto">Delivery</span>
-                        <span class="text-base font-normal text-slate-800 font-roboto">Free</span>
-                    </div>
-                    <div class="flex justify-between items-center mt-3 mb-3">
-                        <span class="font-normal text-base text-slate-800 font-roboto">Tax</span>
-                        <span class="text-base font-normal text-slate-800 font-roboto">Free</span>
-                    </div>
-                    <hr class="border-1 border-slate-300">
-                    <div class="flex justify-between items-center mt-3 mb-3">
-                        <span class="text-base  font-bold text-slate-900 font-roboto">Total</span>
-                        <span class="text-base  font-bold text-slate-000 font-readex">499 DH</span>
-                    </div>
-                    <div class="pb-4 pt-2">
-                        <div class="relative">
-                            <input type="text" id="promo" placeholder="Enter coupon"
-                                class="p-2 text-sm w-3/4 rounded-tl-md rounded-bl-md border-2 border-rose-500 outline-none">
-                            <button
-                                class="bg-rose-500 absolute top-0 right-0 bottom-0 hover:bg-rose-600 px-5 py-2 text-sm w-1/4 font-roboto text-white uppercase rounded-tr-md rounded-br-md ">Apply</button>
-                        </div>
-                    </div>
-                    <hr class="border-1 border-slate-300">
-                    <div class=" mt-3">
+            <div id="summary" class="w-1/4 h-fit px-8 py-10 rounded-lg border-2 border-slate-300">
+                <h1 class="font-semibold text-2xl uppercase font-roboto pb-2">Order Summary</h1>
+                <hr class="border-1 border-slate-300">
+                <div class="flex justify-between items-center mt-10 mb-5">
+                    <span class="font-medium text-sm text-slate-50 font-roboto rounded-full px-2 py-1 bg-green-500 ">Items
+                        3</span>
+                    <span class="text-lg font-semibold text-rose-500 font-readex">499 DH</span>
+                </div>
+                <hr class="border-1 border-slate-300">
+                <div class="flex justify-between items-center mt-3 mb-3">
+                    <span class="text-base font-normal text-slate-800 font-roboto">Delivery</span>
+                    <span class="text-base font-normal text-slate-800 font-roboto">Free</span>
+                </div>
+                <div class="flex justify-between items-center mt-3 mb-3">
+                    <span class="font-normal text-base text-slate-800 font-roboto">Tax</span>
+                    <span class="text-base font-normal text-slate-800 font-roboto">Free</span>
+                </div>
+                <hr class="border-1 border-slate-300">
+                <div class="flex justify-between items-center mt-3 mb-3">
+                    <span class="text-base  font-bold text-slate-900 font-roboto">Total</span>
+                    <span class="text-base  font-bold text-slate-000 font-readex">499 DH</span>
+                </div>
+                <div class="pb-4 pt-2">
+                    <div class="relative">
+                        <input type="text" id="promo" placeholder="Enter coupon"
+                            class="p-2 text-sm w-3/4 rounded-tl-md rounded-bl-md border-2 border-rose-500 outline-none">
                         <button
-                            class="bg-rose-500 font-semibold hover:bg-slate-50 hover:border-2 hover:border-rose-500 rounded-md py-3 text-sm text-white hover:text-rose-500 uppercase w-full">Checkout</button>
+                            class="bg-rose-500 absolute top-0 right-0 bottom-0 hover:bg-rose-600 px-5 py-2 text-sm w-1/4 font-roboto text-white uppercase rounded-tr-md rounded-br-md ">Apply</button>
                     </div>
                 </div>
+                <hr class="border-1 border-slate-300">
+                <div class=" mt-3">
+                    <form action="{{ route('session') }}" method="POST">
+                        @csrf
+                        <button type="submit" class="bg-rose-500 font-semibold hover:bg-slate-50 hover:border-2 hover:border-rose-500 rounded-md py-3 text-sm text-white hover:text-rose-500 uppercase w-full">
+                            Checkout
+                        </button>
+                    </form>
+                     </div>
+            </div>
 
             </div>
         </div>

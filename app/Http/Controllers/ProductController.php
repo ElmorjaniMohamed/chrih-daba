@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -80,5 +81,23 @@ class ProductController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function filtrerParCategory($category)
+    {
+        $produits = Product::where('category', $category)->get();
+        return response()->json($produits);
+    }
+    
+    public function filtrerParPrice($price)
+    {
+        $produits = Product::where('price', $price)->get();
+        return response()->json($produits);
+    }
+    
+    public function filtrerParBrand($brand)
+    {
+        $produits = Product::where('brand', $brand)->get();
+        return response()->json($produits);
     }
 }

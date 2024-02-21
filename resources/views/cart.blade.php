@@ -207,9 +207,13 @@
                 </div>
                 <hr class="border-1 border-slate-300">
                 <div class=" mt-3">
-                    <button
-                        class="bg-rose-500 font-semibold hover:bg-slate-50 hover:border-2 hover:border-rose-500 rounded-md py-3 text-sm text-white hover:text-rose-500 uppercase w-full">Checkout</button>
-                </div>
+                    <form action="{{ route('session') }}" method="POST">
+                        @csrf
+                        <button type="submit" class="bg-rose-500 font-semibold hover:bg-slate-50 hover:border-2 hover:border-rose-500 rounded-md py-3 text-sm text-white hover:text-rose-500 uppercase w-full">
+                            Checkout
+                        </button>
+                    </form>
+                     </div>
             </div>
 
         </div>

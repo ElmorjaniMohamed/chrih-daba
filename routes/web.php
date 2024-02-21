@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\StripeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +25,11 @@ Route::get('/', function () {
 Route::get('/cart', function () {
     return view('cart');
 })->name('cart');
+
+Route::get('/checkout', [StripeController::class,'index'])->name('checkout');
+Route::post('/session', [StripeController::class,'checkout'])->name('session');
+Route::get('/success', [StripeController::class,'success'])->name('success');
+Route::get('/cancel', [StripeController::class,'cancel'])->name('cancel');
 
 Route::get('/product-list', function () {
     return view('product-list');

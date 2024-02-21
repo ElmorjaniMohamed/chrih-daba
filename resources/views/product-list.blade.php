@@ -158,7 +158,7 @@ Heroicon name: mini/minus" x-show="open" xmlns="http://www.w3.org/2000/svg" view
                                         <label for="filter-mobile-category-0"
                                             class="ml-3 min-w-0 flex-1 text-gray-500">Product List</label>
                                     </div>
-
+                                    
                                     <div class="flex items-center">
                                         <input id="filter-mobile-category-1" name="category[]" value="sale"
                                             type="checkbox"
@@ -283,8 +283,40 @@ Heroicon name: mini/minus" x-show="open" xmlns="http://www.w3.org/2000/svg" view
         <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="flex items-baseline justify-between border-b border-gray-200 pt-24 pb-6">
                 <h1 class="text-4xl font-bold tracking-tight text-gray-900  font-roboto">Product List</h1>
+                <div class="relative">
+                                    <label for="Search" class="sr-only "> Search </label>
+
+                                    <input
+                                        type="text"
+                                        id="Search"
+                                        placeholder="Search for..."
+                                        class="w-80 rounded-lg border border-slate-400 py-2.5 px-4 pe-10 shadow-sm sm:text-sm focus:outline-none focus:ring-slate-400 focus:border-slate-400"
+                                    />
+
+                                    <span class="absolute inset-y-0 end-0 grid w-10 place-content-center">
+                                        <button type="button" class="text-rose-500 hover:text-rose-500">
+                                        <span class="sr-only ">Search</span>
+
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke-width="1.5"
+                                            stroke="currentColor"
+                                            class="h-4 w-4"
+                                        >
+                                            <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                                            />
+                                        </svg>
+                                        </button>
+                                    </span>
+                                    </div>
  
                 <div class="flex items-center">
+                    
                     <div x-data="Components.menu({ open: false })" x-init="init()"
                         @keydown.escape.stop="open = false; focusButton()" @click.away="onClickAway($event)"
                         class="relative inline-block text-left outline-none">

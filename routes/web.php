@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
 Route::get('/', [HomeController::class, 'index']);
 
 
@@ -29,6 +30,9 @@ Route::get('/overview/{id}', [HomeController::class, 'overview'])->name('overvie
 Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
 Route::post('/cart/{productId}', [CartController::class, 'addToCart'])->name('cart.add');
 
+// Route::get('/', function () {
+//     return view('home');
+// })->name('officialhome');
 
 Route::get('/home', function () {
     return view('home');

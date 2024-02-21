@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StripeController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,22 +21,18 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
-Route::get('/', function () {
-    return view('home');
-})->name('officialhome');
 
-Route::get('/cart', function () {
-    return view('cart');
-})->name('cart');
+Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/checkout', [StripeController::class,'index'])->name('checkout');
-Route::post('/session', [StripeController::class,'checkout'])->name('session');
-Route::get('/success', [StripeController::class,'success'])->name('success');
-Route::get('/cancel', [StripeController::class,'cancel'])->name('cancel');
 
-Route::get('/product-list', function () {
-    return view('product-list');
-})->name('product-list');
+Route::get('/overview/{id}', [HomeController::class, 'overview'])->name('overview');
+
+Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
+Route::post('/cart/{productId}', [CartController::class, 'addToCart'])->name('cart.add');
+
+// Route::get('/', function () {
+//     return view('home');
+// })->name('officialhome');
 
 Route::get('/home', function () {
     return view('home');

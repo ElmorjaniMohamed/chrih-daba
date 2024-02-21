@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chrih-daba</title>
 
@@ -480,10 +480,10 @@
                                 <!-- Flyout menus -->
                                 <div class="inset-x-0 bottom-0 px-4" x-data="Components.popoverGroup()" x-init="init()">
                                     <div class="flex h-full justify-center space-x-8">
-                                        <a href="{{ route('officialhome') }}"
+                                        <a href=""
                                             class="flex items-center text-sm font-medium text-white">Home</a>
 
-                                        <a href="{{ route('product-list') }}"
+                                        <a href=""
                                             class="flex items-center text-sm font-medium text-white">Store</a>
 
                                         <a href="#"
@@ -560,7 +560,7 @@
 
                                     <!-- Cart -->
                                     <div class="ml-4 flow-root lg:ml-8">
-                                        <a href="{{ route('cart') }}" class="group -m-2 flex items-center p-2">
+                                        <a href="{{ route('cart.show') }}" class="group -m-2 flex items-center p-2">
                                             <svg class="h-6 w-6 flex-shrink-0 text-white"
                                                 x-description="Heroicon name: outline/shopping-bag"
                                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -769,6 +769,8 @@
             </div>
         </div>
     </footer>
+
+
 
 </body>
 

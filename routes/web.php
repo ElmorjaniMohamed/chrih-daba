@@ -18,11 +18,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
 
-Route::get('/', [HomeController::class, 'index']);
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
 Route::get('/overview/{id}', [HomeController::class, 'overview'])->name('overview');
@@ -48,4 +46,13 @@ Route::get('/filtrerParCategory/{categoy}', [ProductController::class, 'filtrerP
 Route::get('/filtrerParBrand/{price}', [ProductController::class, 'filtrerParPrice'])->name('filtrerParPrice');
 Route::get('/filtrerParBrand/{brand}', [ProductController::class, 'filtrerParBrand'])->name('filtrerParBrand');
 
+
+Route::get('/checkout', [StripeController::class,'index'])->name('checkout');
+Route::post('/session', [StripeController::class,'checkout'])->name('session');
+Route::get('/success', [StripeController::class,'success'])->name('success');
+Route::get('/cancel', [StripeController::class,'cancel'])->name('cancel');
 require __DIR__.'/auth.php';
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

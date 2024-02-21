@@ -46,7 +46,7 @@
 
             <a
             class="mt-8 inline-block w-64 rounded-full bg-green-500 py-4 text-sm font-roboto text-white shadow-xl"
-            href="{{route ('officialhome')}}"
+            href="{{route ('home')}}"
             >
             Home
             </a>

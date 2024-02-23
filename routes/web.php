@@ -27,14 +27,14 @@ Route::get('/overview/{id}', [HomeController::class, 'overview'])->name('overvie
 
 Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
 Route::post('/cart/{productId}', [CartController::class, 'addToCart'])->name('cart.add');
+Route::delete('/cart/{productId}', [CartController::class, 'deleteProduct'])->name('cart.delete');
 
-// Route::get('/', function () {
-//     return view('home');
-// })->name('officialhome');
 
-Route::get('/home', function () {
-    return view('home');
-})->middleware(['auth', 'verified'])->name('home');
+Route::post('/checkout', [StripeController::class, 'checkout'])->middleware('auth')->name('checkout');
+Route::get('/success', [StripeController::class, 'success'])->name('success');
+Route::get('/cancel', [StripeController::class, 'cancel'])->name('cancel');
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -43,7 +43,8 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/filtrerParCategory/{categoy}', [ProductController::class, 'filtrerParCategory'])->name('filtrerParCategory');
-Route::get('/filtrerParBrand/{price}', [ProductController::class, 'filtrerParPrice'])->name('filtrerParPrice');
+Route::get('/filtrerParBrand
+/{price}', [ProductController::class, 'filtrerParPrice'])->name('filtrerParPrice');
 Route::get('/filtrerParBrand/{brand}', [ProductController::class, 'filtrerParBrand'])->name('filtrerParBrand');
 
 

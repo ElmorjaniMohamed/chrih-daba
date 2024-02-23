@@ -33,9 +33,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
         integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 
-<body x-data="{ open: false }" @keydown.window.escape="open = false" class="bg-slate-50">
+<body x-data="{ open: false }" @keydown.window.escape="open = false" class="bg-slate-50 relative">
 
     {{-- Menu Mobile --}}
     <div x-show="open" class="relative z-40 lg:hidden"
@@ -480,11 +481,11 @@
                                 <!-- Flyout menus -->
                                 <div class="inset-x-0 bottom-0 px-4" x-data="Components.popoverGroup()" x-init="init()">
                                     <div class="flex h-full justify-center space-x-8">
-                                        <a href=""
-                                            class="flex items-center text-sm font-medium text-white">Home</a>
+                                        <a href="{{route('home')}}"
+                                            class="flex items-center text-sm font-medium text-white {{ request()->routeIs('home') ? 'text-slate-800' : '' }}">Home</a>
 
-                                        <a href=""
-                                            class="flex items-center text-sm font-medium text-white">Store</a>
+                                        <a href="{{route('products')}}"
+                                            class="flex items-center text-sm font-medium text-white {{ request()->routeIs('products') ? 'text-slate-800' : '' }}">Store</a>
 
                                         <a href="#"
                                             class="flex items-center text-sm font-medium text-white">About</a>
@@ -569,7 +570,7 @@
                                                     d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z">
                                                 </path>
                                             </svg>
-                                            <span class="ml-2 text-sm font-medium text-white">0</span>
+                                            <span class="ml-2 text-sm font-medium text-white"></span>
                                             <span class="sr-only">items in cart, view bag</span>
                                         </a>
                                     </div>
@@ -769,6 +770,12 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{asset('js/search.js')}}"></script>
+    <script src="{{asset('js/cart.js')}}"></script>
+    <script src="{{asset('js/totalPrice.js')}}"></script>
+
 
 
 

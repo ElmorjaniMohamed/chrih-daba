@@ -79,11 +79,27 @@
         }
     </style>
 
+    <div class="flex absolute z-50 w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-md  right-4 bottom-5">
+        <div class="flex items-center justify-center w-12 bg-emerald-500">
+            <svg class="w-6 h-6 text-white fill-current" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M20 3.33331C10.8 3.33331 3.33337 10.8 3.33337 20C3.33337 29.2 10.8 36.6666 20 36.6666C29.2 36.6666 36.6667 29.2 36.6667 20C36.6667 10.8 29.2 3.33331 20 3.33331ZM16.6667 28.3333L8.33337 20L10.6834 17.65L16.6667 23.6166L29.3167 10.9666L31.6667 13.3333L16.6667 28.3333Z" />
+            </svg>
+        </div>
+
+        <div class="px-4 py-2 -mx-3">
+            <div class="mx-3">
+                <span class="font-semibold text-emerald-500 dark:text-emerald-400">Success</span>
+                <p class="text-sm text-gray-600 dark:text-gray-200">Your account was registered!</p>
+            </div>
+        </div>
+    </div>
     <section>
         <!-- Hero section -->
         <div class="relative group bg-slate-50 py-14">
             <!-- Decorative image and overlay -->
-            <img src="{{ asset('img/off.svg') }}" class="w-48 h-48 z-40 animate-bounce absolute top-24 left-32" alt="">
+            <img src="{{ asset('img/off.svg') }}" class="w-48 h-48 z-40 animate-bounce absolute top-24 left-32"
+                alt="">
             <div aria-hidden="true" class="absolute inset-0 overflow-hidden opacity-95 sm:h-auto">
                 <img src="{{ asset('img/shop.jpg') }}" alt="" class="h-screen w-full object-cover object-center">
             </div>
@@ -237,7 +253,9 @@
 
                         {{-- product action button --}}
                         <div class="mt-5 flex gap-2">
-                            <button class="bg-rose-500/95 hover:bg-rose-600/90 px-6 py-2 rounded-md text-white font-roboto font-medium tracking-wider transition add-to-cart-btn" data-product-id="{{ $product->id }}">
+                            <button
+                                class="bg-rose-500/95 hover:bg-rose-600/90 px-6 py-2 rounded-md text-white font-roboto font-medium tracking-wider transition add-to-cart-btn"
+                                data-product-id="{{ $product->id }}">
                                 Add to cart
                             </button>
 
@@ -723,12 +741,13 @@
         </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
 
             addToCartButtons.forEach(button => {
-                button.addEventListener('click', function () {
+                button.addEventListener('click', function() {
                     const productId = this.getAttribute('data-product-id');
                     addToCart(productId);
                 });
@@ -736,33 +755,42 @@
 
             function addToCart(productId) {
                 fetch(`/cart/${productId}`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                    },
-                    body: JSON.stringify({ productId: productId })
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Failed to add product to cart.');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    alert(data.message);
-                    location.reload();
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('Failed to add product to cart. Please try again later.');
-                });
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                        },
+                        body: JSON.stringify({
+                            productId: productId
+                        })
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Failed to add product to cart.');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        Toastify({
+                            text: data.message,
+                            duration: 5000,
+                            backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                            className: "info",
+                        }).showToast();
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        Toastify({
+                            text: 'Failed to add product to cart. Please try again later.',
+                            duration: 5000,
+                            backgroundColor: "linear-gradient(to right, #ff416c, #ff4b2b)",
+                            className: "error",
+                        }).showToast();
+                    });
             }
         });
     </script>
-
-
-
 @endsection
 
 @include('layouts.app')
+

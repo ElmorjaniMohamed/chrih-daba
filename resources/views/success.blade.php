@@ -39,14 +39,14 @@
         <section class="rounded-3xl h-fit shadow-2xl m-60  ">
         <div class="p-3 text-center sm:p-7">
             <p class="text-sm font-roboto uppercase tracking-widest text-green-600">
-            Merci pour votre confience 
+            Merci pour votre confience
             </p>
 
             <h2 class="mt-6 text-3xl font-semibold font-roboto">Paiement effectué avec succès !</h2>
 
             <a
             class="mt-8 inline-block w-64 rounded-full bg-green-500 py-4 text-sm font-roboto text-white shadow-xl"
-            href="{{route ('officialhome')}}"
+            href="{{route('home')}}"
             >
             Home
             </a>
